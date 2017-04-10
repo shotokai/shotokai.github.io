@@ -23,6 +23,7 @@ So we have a `JSON` file that maps user roles to permissions:
     }
 }
 {% endhighlight %}
+> you could simplify the above by processing the json file an overlaying 'super' permissions onto the other permissions.  I've omitted that in the example because it is not jermaine to the goal of understanding Observables.
 
 {% highlight javascript %}
 let foo = 'bar';
