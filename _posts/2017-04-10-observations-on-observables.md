@@ -4,7 +4,7 @@ title: "Observations on Observables"
 date: 2017-04-10
 ---
 
-Observables are hard.
+Observables are harder.
 
 {% highlight javascript %}
 const foo = {
