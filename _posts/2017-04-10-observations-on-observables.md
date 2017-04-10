@@ -10,15 +10,6 @@ Now if your using ngrx to manage state, you are already knee deep in Observable 
 
 One place where I wanted to implement the observer pattern in my application was in dealing with authorization.  We're talking about who can do what here, not who are you? (which is usually referred to as authentication).  I wanted to be able to use a common 'permissions' scheme in the application api (which is written in Node) and in the client.  So my thought was to store a mapping of user roles to permissions on the server, use it for my Node api, and provide it to the client at a REST endpoint.  All straightforward so far...
 
-
-
-
-{% highlight javascript %}
-
-{% endhighlight %}
-import 'rxjs/add/operator/toPromise';
-
-this.
 {% highlight javascript %}
 let foo = 'bar';
 {% endhighlight %}
