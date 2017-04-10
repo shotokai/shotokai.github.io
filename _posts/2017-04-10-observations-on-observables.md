@@ -25,6 +25,13 @@ So we have a `JSON` file that maps user roles to permissions:
 {% endhighlight %}
 > you could simplify the above by processing the json file an overlaying 'super' permissions onto the other permissions.  I've omitted that in the example because it is not jermaine to the goal of understanding Observables.
 
+Here is the basic functionality we are looking for:
+- In our Angular app we get this JSON object using a ngrx (action/reducer/effect) and place it in the store.
+- We have an Angular Service that we ask *authorization* questions of.  e.g. 'can the current user edit this task?'.
+- If the permissions change in the store, the answer to our question updates accordingly and that change effects our UI.
+
+To do this following our redux pattern, our 'question' should return an Observable, to which we will subscribe in the Component(s) that need to know about authorization.
+
 {% highlight javascript %}
 let foo = 'bar';
 {% endhighlight %}
