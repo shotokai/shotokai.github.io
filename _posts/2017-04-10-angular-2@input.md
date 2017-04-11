@@ -18,15 +18,12 @@ In my detail component I receive the input:
 {% highlight typescript %}
 export class MyDetailComponent implements OnInit {
   _task: TaskBuffer | undefined;
-...
+
   @Input() set task(value) {
     this._task = this._createBuffer(value);
   }
   
   constructor() { }
-  
-  ...
-  
   // create and return a buffer so that ngModel does not bind to the store
   private _createBuffer (task): TaskBuffer {
     return Object.assign({}, task);
