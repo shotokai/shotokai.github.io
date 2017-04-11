@@ -15,20 +15,6 @@ To break it down a bit.  The parent component subscribes to a *slice* of the **s
 
 In my detail component I receive the input:
 
-{% highlight typescript %}
-export class MyDetailComponent implements OnInit {
-  _task: TaskBuffer | undefined;
 
-  @Input() set task(value) {
-    this._task = this._createBuffer(value);
-  }
-  
-  constructor() { }
-  // create and return a buffer so that ngModel does not bind to the store
-  private _createBuffer (task): TaskBuffer {
-    return Object.assign({}, task);
-  }
-}
-{% endhighlight %}
 
 
