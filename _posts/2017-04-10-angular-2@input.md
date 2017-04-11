@@ -9,11 +9,13 @@ What to do.
 
 To break it down a bit.  The parent component subscribes to a *slice* of the **store**.  In this case that *slice* is **Tasks**.  My detail componet has an @Input of task, which the parent component binds to:
 
-(% highlight html %}
+```
 <my-detail-component [task]="selectedTask"></my-detail-component>
-{% endhighlight %}
+```
 
 In my detail component I receive the input:
+
+
 
 
 
