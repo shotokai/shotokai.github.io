@@ -23,7 +23,11 @@ export class MyDetailComponent implements OnInit {
     this._task = this._createBuffer(value);
   }
   
-  constructor() { }
+  constructor(
+  private store: Store<fromRoot.State>
+  ...
+  ) { }
+  
   // create and return a buffer so that ngModel does not bind to the store
   private _createBuffer (task): TaskBuffer {
     return Object.assign({}, task);
