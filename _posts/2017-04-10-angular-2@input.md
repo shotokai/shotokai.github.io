@@ -3,7 +3,7 @@ layout: post
 title: "Angular 2 @Input get and set"
 date: 2017-04-10
 ---
-Oh the joys of digging deep.  I'm working with a classic master/detail scenario in Angular 2, where the detail is dialog (modal) Component.  The common approach to this is to get the collection (in this case tasks) in the master, and then to pass the selected task to the *dumb* or presentational Component using a property on the detail Component `class` which is decorated with `@Input`. [Checkout the Angular Guide for a great walkthrough of how and why to use @Input](@Input guide).
+Oh the joys of digging deep.  I'm working with a classic master/detail scenario in Angular 2, where the detail is dialog (modal) Component.  The common approach to this is to get the collection (in this case tasks) in the master, and then to pass the selected task to the *dumb* or presentational Component using a property on the detail Component `class` which is decorated with `@Input`. [Checkout the Angular Guide for a great walkthrough of how and why to use @Input](Input guide).
 
 Now, since I have drunk the ngrx/redux Cool-Aid I can't rely on my old friend *two-way data binding* in the way I used to.  I still need to bind my form inputs data back to a model, but that model can't be the **store**, or I will find myself mutating **state**.  At which point the redux Police will show up, and well you can imagine the rest.
 
@@ -37,5 +37,5 @@ export class MyDetailComponent implements OnInit {
 }
 {% endhighlight %}
 
-[@Input guide]: https://angular.io/docs/ts/latest/guide/template-syntax.html#!#inputs-outputs
+[Input guide]: https://angular.io/docs/ts/latest/guide/template-syntax.html#!#inputs-outputs
 
