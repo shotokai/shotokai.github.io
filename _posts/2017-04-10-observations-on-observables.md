@@ -88,7 +88,7 @@ export class AuthorizationService {
 
 {% endhighlight %}
 
-I start by injecting the store in the class constructor, and then creating Observables of the currentUser and permissions from our store (`this.oCurrentUser` and `this.oPermissions`) in the private `_init()` method.
+I start by injecting the store in the class constructor, and then creating local variables which are Observables of the currentUser and permissions from our store (`this.oCurrentUser` and `this.oPermissions`) in the private `_init()` method.
 
 So when Angular injects the service it will 'new' the exported class `AuthorizationService`, and the methods on this class will be available in the component(s) into which it is injected.  Beyond the setup code we've looked at so far, my class has two methods:
 
@@ -129,5 +129,7 @@ So when Angular injects the service it will 'new' the exported class `Authorizat
     return !!matched.length;
   }
 {% endhighlight %}
+
+What makes this all work 
 
 
