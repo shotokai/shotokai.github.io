@@ -1,5 +1,5 @@
 ---
 layout: post
-title: "Observations on Observables and ngrx"
-date: 2017-04-10
+title: "Going to production with an Angular CLI app"
+date: 2017-05-04
 ---
